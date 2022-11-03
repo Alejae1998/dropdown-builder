@@ -29,26 +29,34 @@
         </header>
 
         <main>
-            <class="dropdown">
-                <div class="select">
-                <label>
-                    Head
-                    <select id="head-select">
-                        <option value="coco">Coco</option>
-                        <option value="winwin">Winwin</option>
-                        <option value="pegasus">Pegasus</option>
-                    </select>
-                    </label>
-                    </div>
+            <section class="dropdown">
                 <div class="select">
                     <label>
-                        Outfit 
+                        Head
+                        <select id="head-select">
+                            <option value="coco">Coco</option>
+                            <option value="winwin">Winwin</option>
+                            <option value="pegasus">Pegasus</option>
+                        </select>
+                    </label>
+                    <img id="head-img" src="./assets/cat-head.png" alt="cat head" />
+                    <div id="head-change-counter" class="counter">
+                        You have change the head 0 times
+                    </div>
+                </div>
+                <div class="select">
+                    <label>
+                        Outfit
                         <select id="body-select">
                             <option value="knit-sweater">Knit sweater</option>
                             <option value="tshirt">T-shirt</option>
                             <option value="suit">Suit</option>
                         </select>
                     </label>
+                    <img id="body-img" src="./assets/suit-body.png" alt="suite" />
+                    <div id="body-change-counter" class="counter">
+                        you have change the outfit 0 times
+                    </div>
                 </div>
                 <div class="select">
                     <label>
@@ -59,11 +67,15 @@
                             <option value="cell-phone">Cell phone</option>
                         </select>
                     </label>
+                    <img id="accesory-img" src="./assets/crown-accessory.png" alt="crown image" />
+                    <div id="accesory-change-counter" class="counter">
+                        You have change the accessory 0 times
+                    </div>
                 </div>
             </section>
             <section class="name">
                 <label for="name-input">Name your pet</label>
-                <input id="name-input" type="text" placeholder="name your pet"/>
+                <input id="name-input" type="text" placeholder="name your pet" />
                 <button id="name-button">Add</button>
                 <ul id="name-list"></ul>
             </section>
