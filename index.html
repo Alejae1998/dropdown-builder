@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Pet Maker</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <body>
+                <audio controls autoplay>
+                    <source src="./assets/background.mp3" type="audio/mpeg" />
+                </audio>
+            </body>
+            <section class="dropdown">
+                <div class="select">
+                    <label>
+                        Head
+                        <select id="head-select" class="glow-on-hover">
+                            <option value="coco" style="width: 200px">Coco</option>
+                            <option value="winwin" style="width: 200px">Winwin</option>
+                            <option value="pegasus" style="width: 200px">Pegasus</option>
+                        </select>
+                    </label>
+                    <img id="head-img" src="./assets/coco-head.png" alt="cat head" />
+                    <div id="head-change-counter" class="counter">
+                        You have change the head 0 times
+                    </div>
+                </div>
+                <div class="select">
+                    <label>
+                        Outfit
+                        <select id="body-select" class="glow-on-hover">
+                            <option value="sweater">Knit sweater</option>
+                            <option value="tshirt">T-shirt</option>
+                            <option value="suit">Suit</option>
+                        </select>
+                    </label>
+                    <img id="body-img" src="./assets/sweater-body.png" alt="suite" />
+                    <div id="body-change-counter" class="counter">
+                        you have change the outfit 0 times
+                    </div>
+                </div>
+                <div class="select">
+                    <label>
+                        Accessory
+                        <select id="accessory-select" class="glow-on-hover">
+                            <option value="purse">Purse</option>
+                            <option value="crown">Crown</option>
+                            <option value="phone">Cell phone</option>
+                        </select>
+                    </label>
+                    <img id="accessory-img" src="./assets/purse-accessory.png" alt="crown image" />
+                    <div id="accessory-change-counter" class="counter">
+                        You have change the accessory 0 times
+                    </div>
+                </div>
+            </section>
+            <section class="name">
+                <label for="name-input">Name your pet</label>
+                <input id="name-input" type="text" placeholder="name your pet" />
+                <button id="name-button" class="glow-on-hover">Add</button>
+                <ul id="name-list"></ul>
+            </section>
+        </main>
+    </body>
 </html>
