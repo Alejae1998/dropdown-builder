@@ -5,7 +5,7 @@ const headChangeCounter = document.getElementById('head-change-counter');
 const bodyDropdown = document.getElementById('body-select');
 const bodyImg = document.getElementById('body-img');
 const bodyChangeCounter = document.getElementById('body-change-counter');
-const bottomDropdown = document.getElementById('bottom-dropdown');
+const accessorySelect = document.getElementById('accessory-select');
 const accessoryImg = document.getElementById('accessory-img');
 const accessoryChangeCounter = document.getElementById('accessory-change-counter');
 const sloganList = document.getElementById('name-list');
@@ -22,6 +22,17 @@ headDropdown.addEventListener('change', (e) => {
     const value = e.target.value;
     headImg.src = `./assets/${value}-head.png`;
 });
+
+bodyDropdown.addEventListener('change', (e) => {
+    const value = e.target.value;
+    bodyImg.src = `./assets/${value}-body.png`;
+});
+
+accessorySelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    accessoryImg.src = `./assets/${value}-accessory.png`;
+});
+
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
